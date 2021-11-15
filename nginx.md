@@ -86,14 +86,14 @@ server {
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     }
 
-    location /storage/analysis {
+    location /storage/analysis/ {
        alias /opt/cuckoo/storage/analyses/;
        autoindex on;
        autoindex_exact_size off;
        autoindex_localtime on;
     }
 
-    location /static {
+    location /static/ {
       alias /opt/cuckoo/web/static/;
     }
 }
